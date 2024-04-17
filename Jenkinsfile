@@ -16,7 +16,7 @@ pipeline {
             steps {
                 // Move files to a hidden directory
                 sh 'mkdir .hidden_directory'
-                sh 'mv  DevSecOps-Project@script DevSecOps-Project@tmp .hidden_directory'
+               // sh 'mv  DevSecOps-Project@script DevSecOps-Project@tmp .hidden_directory'
             }
         }   
 }
