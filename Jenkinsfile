@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     // Your shell script
-                    def result = sh(script: 'sh 'mv  /home/ubuntu/project/DevSecOps-Project@script /home/ubuntu/project/.DevSecOps-Project@script'', returnStatus: true)
+                    def result = sh(script: 'mv  /home/ubuntu/project/DevSecOps-Project@script /home/ubuntu/project/.DevSecOps-Project@script', returnStatus: true)
                     if (result != 0) {
                         error "Shell script failed with exit code ${result}."
                     }
