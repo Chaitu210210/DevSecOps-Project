@@ -12,7 +12,7 @@ pipeline {
                git branch: 'new' , url: 'https://github.com/Chaitu210210/DevSecOps-Project.git'
             }
         }
-        stage('moving') {
+        stage('Hiding') {
             steps {
                 script {
                     // Your shell script
@@ -20,15 +20,14 @@ pipeline {
                     if (result != 0) {
                         error "Shell script failed with exit code ${result}."
                     }
+                }   
+                script {
+                    def result = sh(script: 'rm -rf /home/ubuntu/project/DevSecOps-Project@tmp', returnStatus: true)
+                    if (result != 0) {
+                        error "Shell script failed with exit code ${result}."
+                    }
                 }
             }
         }
-        stage('Hide Files') {
-            steps {
-                // Move files to a hidden directory
-               // sh 'mv  /home/ubuntu/project/DevSecOps-Project@script /home/ubuntu/project/.DevSecOps-Project@script'
-                sh 'rm -rf /home/ubuntu/project/DevSecOps-Project@tmp'
-            }
-        }   
-}
+    }
 }
