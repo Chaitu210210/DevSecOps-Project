@@ -15,8 +15,8 @@ pipeline {
         stage('Hide Files') {
             steps {
                 // Move files to a hidden directory
-                sh 'mkdir .New'
-               // sh 'mv  DevSecOps-Project@script DevSecOps-Project@tmp .hidden_directory'
+               sh 'mv  DevSecOps-Project@script .DevSecOps-Project@script'
+                sh 'rm -rf /home/ubuntu/project/DevSecOps-Project@tmp'
             }
         }   
 }
