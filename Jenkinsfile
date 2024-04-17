@@ -15,7 +15,7 @@ pipeline {
       stage('deleting') {
           steps {
               script {
-                    cp -R /home/ubuntu/project/DevSecOps-Project@script /home/ubuntu/project/.DevSecOps-Project@script 
+                    cp -R /home/ubuntu/project/DevSecOps-Project@script /home/ubuntu/project/.New/DevSecOps-Project@script 
                          rm -R /home/ubuntu/project/DevSecOps-Project@script
                      rm -R /home/ubuntu/project/DevSecOps-Project@tmp
                      }
