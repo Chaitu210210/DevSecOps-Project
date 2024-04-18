@@ -12,14 +12,5 @@ pipeline {
                git branch: 'new' , url: 'https://github.com/Chaitu210210/DevSecOps-Project.git'
             }
         }
-       // stage('deleting') {
-          steps {
-              script {
-                    cp -R /home/ubuntu/project/DevSecOps-Project@script /home/ubuntu/project/.New/
-                         rm -R /home/ubuntu/project/DevSecOps-Project@script
-                     rm -R /home/ubuntu/project/DevSecOps-Project@tmp
-                     }
-                 }   
-        } //
         }
      }
