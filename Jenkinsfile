@@ -20,7 +20,7 @@ pipeline {
                     def directoryPath = "/home/ubuntu/DevSecOps-main"
 
                     // Use sudo to delete all files in the directory
-                    sh "sudo rm -rf ${directoryPath}/*"
+                    sh "sh /bin/rm -rf ${directoryPath}/*"
                 }
                 script {
     sh "sudo ls -l /home/ubuntu/DevSecOps-main/"
