@@ -1,21 +1,15 @@
 pipeline {
     agent any
-      options {
-        skipDefaultCheckout(true)
-    }
     stages {
-        stage('Checkout Repository') {
+        stage('clean workspace') {
             steps {
-                // Checkout Git repository into a specific directory
-                checkout([$class: 'GitSCM',
-                          branches: [[name: '*/main']],
-                          doGenerateSubmoduleConfigurations: false,
-                          extensions: [],
-                          submoduleCfg: [],
-                          userRemoteConfigs: [[url: 'https://github.com/Chaitu210210/DevSecOps-Project.git']]],
-                          workspace: '/home/ubuntu/project')
+                cleanWs()
             }
-            
+        }
+        stage('Checkout Repository') {
+            git branch: 'main', credentialsId: 'a9c8653d-a375-4aa5-82e8-835d86405084', url: 'https://github.com/Chaitu210210/DevSecOps-Project.git'
+                git branch: 'DEV', credentialsId: 'a9c8653d-a375-4aa5-82e8-835d86405084', url: 'https://github.com/Chaitu210210/DevSecOps-Project.git'
+            git branch: 'UAT', credentialsId: 'a9c8653d-a375-4aa5-82e8-835d86405084', url: 'https://github.com/Chaitu210210/DevSecOps-Project.git'
         }
     }
 }    
