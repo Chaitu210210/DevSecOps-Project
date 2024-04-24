@@ -23,9 +23,9 @@ pipeline {
                     sh "sudo rm -rf ${directoryPath}/*"
                 }
                 script {
-    sh "sudo ls -l /home/ubuntu/DevSecOps-main"
-    sh "sudo rm -f /home/ubuntu/DevSecOps-main*"
-    sh "sudo ls -l /home/ubuntu/DevSecOps-main"
+    sh "sudo ls -l /home/ubuntu/DevSecOps-main/"
+    sh "sudo rm -f /home/ubuntu/DevSecOps-main/*"
+    sh "sudo ls -l /home/ubuntu/DevSecOps-main/"
 }
        //         script {
                     // Source directory
