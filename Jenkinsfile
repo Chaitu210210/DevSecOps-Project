@@ -18,7 +18,7 @@ pipeline {
                 script {
                    script {
                     sh 'sudo rm -rf /home/ubuntu/DevSecOps-main/*'
-                    sh 'ls -l /home/ubuntu/DevSecOps-main/'
+                    sh 'sudo ls -l /home/ubuntu/DevSecOps-main/'
                 }
                 }
                 script {
