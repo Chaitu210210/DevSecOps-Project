@@ -16,8 +16,14 @@ pipeline {
         stage('Move Directories') {
             steps {
                 script {
-                    // Move the directories
-                    sh "sudo mv /var/lib/jenkins/workspace/DevSecOps-Project_main /home/ubuntu/project/"
+                    // Source directory
+                    def sourceDir = "/var/lib/jenkins/workspace/DevSecOps-Project_main"
+
+                    // Destination directory
+                    def destDir = "/home/ubuntu/DevSecOps-main"
+
+                    // Copy all files from sourceDir to destDir
+                    sh "sudo cp -r ${sourceDir}/* ${destDir}"
                 }
             }
         }
