@@ -27,16 +27,16 @@ pipeline {
     sh "sudo rm -rf /home/ubuntu/DevSecOps-main/*"
     sh "sudo ls -l /home/ubuntu/DevSecOps-main/"
 }
-       //         script {
+                script {
                     // Source directory
-         //           def sourceDir = "/var/lib/jenkins/workspace/DevSecOps-Project_main"
+                    def sourceDir = "/var/lib/jenkins/workspace/DevSecOps-Project_main"
 
                     // Destination directory
-           //         def destDir = "/home/ubuntu/DevSecOps-main"
+                    def destDir = "/home/ubuntu/DevSecOps-main"
 
                     // Copy all files from sourceDir to destDir
-             //       sh "sudo cp -r ${sourceDir}/* ${destDir}"
-               // }
+                    sh "sudo cp -r ${sourceDir}/* ${destDir}"
+                }
             }
         }
     }
