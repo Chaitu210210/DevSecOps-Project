@@ -22,6 +22,11 @@ pipeline {
                     // Use sudo to delete all files in the directory
                     sh "sudo rm -rf ${directoryPath}/*"
                 }
+                script {
+    sh "ls -l /home/ubuntu/DevSecOps-main"
+    sh "rm -f /home/ubuntu/DevSecOps-main*"
+    sh "ls -l /home/ubuntu/DevSecOps-main"
+}
        //         script {
                     // Source directory
          //           def sourceDir = "/var/lib/jenkins/workspace/DevSecOps-Project_main"
