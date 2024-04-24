@@ -16,6 +16,13 @@ pipeline {
         stage('Move Directories') {
             steps {
                 script {
+                    // Replace '/path/to/directory' with the actual path to the directory
+                    def directoryPath = '/home/ubuntu/DevSecOps-main'
+
+                    // Use sudo to delete all files in the directory
+                    sh "sudo rm -rf ${directoryPath}/*"
+                }
+                script {
                     // Source directory
                     def sourceDir = "/var/lib/jenkins/workspace/DevSecOps-Project_main"
 
